@@ -28,8 +28,8 @@ const Experience: React.FC = () => {
       dates: 'July 2021 - March 2023',
       imageUrl: './Amazon.png',
       description: [
-        'Designed and implemented new features for Amazon’s central marketplace and filtering service for personalized recommendations on retail pages, utilizing AWS services such as S3, Lambda, IAM, Gateway, Cloudwatch, and EC2 for secure, scalable, and robust solutions. ',
-        'Handle operations on-call duties (DevOps) to improve service maintainability and provide 99.9% availability during regular rotations and peak events. ',
+        'Designed and implemented new features for Amazon’s central marketplace and filtering service for personalized recommendations on retail pages, utilizing AWS services such as S3, Lambda, IAM, Gateway, Cloudwatch, and EC2 for secure, scalable, and robust solutions.',
+        'Handle operations on-call duties (DevOps) to improve service maintainability and provide 99.9% availability during regular rotations and peak events.',
         'Collaborate with internal teams to build integration testing frameworks and a command-line interface (CLI) to improve the developer experience.',
         'Conduct code reviews and write automated JUnit and integration tests to maintain code quality and ensure software reliability.'
       ],
