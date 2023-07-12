@@ -28,7 +28,6 @@ const Projects: React.FC = () => {
       description: 'This Amazon Price Tracker webscraps Amazon in real time and outs a JSON file that gives you the best deal based on your search. Planning to revisit.',
       technologies: ['Python', 'Selenium'],
       imageUrl: 'Python.jpeg',
-      liveLink: 'https://github.com/jgavrilo/Amazon-Price-Tracker',
       repoLink: 'https://github.com/jgavrilo/Amazon-Price-Tracker',
     },
     {
@@ -37,7 +36,6 @@ const Projects: React.FC = () => {
       description: 'Final Project for CIS 400 - Principle of Social Media and Data Mining. Planning to revisit.',
       technologies: ['Python', 'Twitter API', 'MongoDB'],
       imageUrl: 'Twitter.jpg',
-      liveLink: 'https://github.com/jgavrilo/Stock-Market-Data-Analysis',
       repoLink: 'https://github.com/jgavrilo/Stock-Market-Data-Analysis',
     },
     {
