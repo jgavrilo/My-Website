@@ -49,12 +49,12 @@ const Projects: React.FC = () => {
     },
     {
       id: 5,
-      title: 'My Chrome Tool Set',
-      description: 'Boost your productivity without leaving your browser! My Chrome Tool Set is a feature-rich extension designed to make your life easier and more organized.',
+      title: 'GetItTogether',
+      description: 'Boost your productivity without leaving your browser! GetItTogether is a feature-rich extension designed to make your life easier and more organized.',
       technologies: ['Chrome Extension', 'HTML/CSS', 'Javascript'],
-      imageUrl: 'MyChromeToolSetLogo.png',
-      liveLink: 'https://chrome.google.com/webstore/detail/my-chrome-tool-set/ojfhpccogblegeiacmljgecdcmadecgg/related?hl=en&authuser=0',
-      repoLink: 'https://github.com/jgavrilo/My-Chrome-Tool-Set',
+      imageUrl: 'GetItTogether.jpg',
+      liveLink: 'https://chrome.google.com/webstore/detail/getittogether/ojfhpccogblegeiacmljgecdcmadecgg/related?hl=en&authuser=0',
+      repoLink: 'https://github.com/jgavrilo/GetItTogethert',
     },
     ];
 
