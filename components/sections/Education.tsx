@@ -26,8 +26,22 @@ const Education: React.FC = () => {
       dates: '2017 - 2021',
       imageUrl: 'Syracuse.png',
       coursework: [ 
-        'Data Structures & Algorithms',
+        'Data Structures',
         'Database Management Systems',
+        'Ethical Aspects of Engineering and Computer Science',
+        'Programming Language: Theory & Practice',
+      ],
+    },
+    {
+      id: 2,
+      degree: 'Computer Science Study Abroad Program',
+      institution: 'Syracuse University London',
+      location: 'London, UK',
+      dates: 'Fall 2019',
+      imageUrl: 'Syracuse-London.jpeg',
+      coursework: [ 
+        'Automata and Computability',
+        'Introduction to Analysis of Algorithms',
       ],
     },
   ];
