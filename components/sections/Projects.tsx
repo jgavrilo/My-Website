@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
       description: 'Final Project for CIS 400 - Principle of Social Media and Data Mining.',
       technologies: ['Python', 'Twitter API', 'MongoDB'],
       imageUrl: 'Twitter.jpg',
-      repoLink: 'https://github.com/jgavrilo/Stock-Market-Data-Analysis',
+      repoLink: 'https://github.com/jgavrilo/Twitter-Based-Stock-Analysis',
     },
     {
       id: 6,
