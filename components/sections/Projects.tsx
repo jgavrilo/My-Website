@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
       id: 2,
       title: 'GetItTogether',
       description: 'Boost your productivity without leaving your browser! GetItTogether is a feature-rich extension designed to make your life easier and more organized.',
-      technologies: ['Chrome Extension', 'HTML/CSS', 'Javascript'],
+      technologies: ['Chrome Extension', 'HTML/CSS', 'Javascript', 'Google API'],
       imageUrl: 'GetItTogether.jpg',
       chromeLink: 'https://chrome.google.com/webstore/detail/getittogether/ojfhpccogblegeiacmljgecdcmadecgg/related?hl=en&authuser=0',
       repoLink: 'https://github.com/jgavrilo/GetItTogether',
