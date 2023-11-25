@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/hello',
-  assetPrefix: '/hello',
+  basePath: '/',
+  assetPrefix: '/',
   trailingSlash: true,
 };
 
