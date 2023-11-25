@@ -1,0 +1,71 @@
+/* Main section styles */
+.projectDescription {
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    background: var(--background-color);
+    width: 100vw;
+  }
+  
+  /* Header and title styles */
+  .projectDescription .header {
+    text-align: center;
+    padding-bottom: 2rem; /* Padding below the title */
+  }
+  
+  .projectDescription h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+ /* Flex container for image and text */
+.projectContent {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-around;
+    gap: 20px; /* Optional: adds space between image and text */
+  }
+
+/* Image container styles */
+.projectPhotoWrapper {
+  width: 250px; /* Width of the square */
+  height: 250px; /* Height of the square */
+  overflow: hidden; /* Hide parts of the image that overflow */
+  border-radius: 35px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.projectPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+  
+  /* Paragraph text styles */
+  .projectText {
+    flex: 1.5; /* Takes up 2/3 of the width */
+    max-width: 66.67%; /* Limit to two-thirds of the container width */
+  }
+  
+  .projectText p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .projectContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .projectPhoto,
+    .projectText {
+      max-width: 100%; /* Full width on smaller screens */
+    }
+  }
+  

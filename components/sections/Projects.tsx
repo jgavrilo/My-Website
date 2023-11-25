@@ -31,6 +31,7 @@ const Projects: React.FC = () => {
       imageUrl: 'GetItTogether.jpg',
       chromeLink: 'https://chrome.google.com/webstore/detail/getittogether/ojfhpccogblegeiacmljgecdcmadecgg/related?hl=en&authuser=0',
       repoLink: 'https://github.com/jgavrilo/GetItTogether',
+      websiteLink: '/getittogether'
     },
     {
       id: 3,

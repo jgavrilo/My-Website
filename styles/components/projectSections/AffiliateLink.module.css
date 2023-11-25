@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between elements */
+    align-items: center; /* Centers items vertically */
+    padding: 10px;
+    font-family: var(--font-mono);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+  }
+  
+  .message {
+    margin-left: 10vw;
+    text-align: right;
+    flex: 0 0 77%; /* Flex grow, shrink, and basis set to maintain width */
+  }
+  
+  .icon {
+    transition: color 0.3s ease;
+    font-size: 50px; /* Adjust the size of the icon */
+    flex: 0 0 20%; /* Flex grow, shrink, and basis set to maintain width */
+    color: var(--text-color);
+    margin-left: 2vw;
+    text-align: left; /* Align the icon to the right */
+  }
+  
+  .message a:hover {
+    color: var(--project-link-hover-button-color);
+}
+
+
+  .icon:hover {
+    color: var(--project-link-hover-button-color);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 560px) {
+    .container {
+      flex-direction: column; /* Stack elements vertically on small screens */
+    }
+  
+    .message, .icon {
+      margin-left: 0vw;
+
+      flex: 0 0 auto; /* Reset flex basis on small screens */
+      text-align: center; /* Center-align text and icon on small screens */
+    }
+  }
+  
