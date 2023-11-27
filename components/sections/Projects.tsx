@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: 'InfoBytes',
-      description: 'Simplify your daily life with InfoBytes, the app that helps you make informed decisions about your diet and allergies instantly. Beta Coming Soon!',
+      description: 'Simplify your daily life with InfoBytes, the app that helps you make informed decisions about your diet and allergies instantly. Beta available!',
       technologies: ['SwiftUI', 'Firebase', 'Google MLKit'],
       imageUrl: 'InfoBytes.png',
       websiteLink: 'https://www.signaltechnologies.io/infobtyes',
