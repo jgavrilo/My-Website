@@ -26,7 +26,7 @@ const GetItTogether: React.FC = () => {
       githubLink="https://github.com/jgavrilo/GetItTogether"
       appStoreLink="https://chrome.google.com/webstore/detail/getittogether/ojfhpccogblegeiacmljgecdcmadecgg?hl=en&authuser=0"
       termsOfUseLink="/terms"
-      privacyPolicyLink="/privacy"
+      privacyPolicyLink="/files/GetItTogether-Privacy-Policy.pdf"
       projectDescription={[
         "Boost your productivity without leaving your browser! GetItTogether is a feature-rich chrome extension designed to make your life easier and more organized.",
         "Current features include a timer, to-do list with google api connection, a spotify mini-player, and a settings area to keep things customized!"
