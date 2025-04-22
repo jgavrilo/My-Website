@@ -22,6 +22,22 @@ const Experience: React.FC = () => {
   const jobs: Job[] = [
     {
       id: 1,
+      title: 'Software Engineering Manager & Developer',
+      company: 'Contractor',
+      location: 'Seattle, Washington',
+      dates: 'June 2024 - Present',
+      imageUrl: './software-engineer.png',
+      description: [
+        'Oversee and integrate software systems for local businesses, including store applications, point-of-sale systems, and notification-based marketing platforms.',
+        'Collaborate with third-party vendors to optimize social network integrations and streamline operational workflows.',
+        'Engineer robust API solutions that automate manual processes, improve customer communication, and enhance inventory management efficiency.',
+        'Designed and launched innovative iOS applications that engaged and expanded a customer base of over 20,000 users.',
+        'Provide on-site technical support, swiftly diagnosing and resolving hardware and software issues to minimize downtime and ensure business continuity.',
+        'Conduct detailed analyses of customer trends, inventory patterns, and revenue performance to drive strategic decision-making and optimize business processes.'
+      ],
+    },
+    {
+      id: 2,
       title: 'Software Developement Engineer',
       company: 'Amazon.com LLC',
       location: 'Seattle, Washington',

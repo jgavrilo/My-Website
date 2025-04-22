@@ -96,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({ items }) => {
       </div>
       )}
       <a
-      href="https://jeremygavrilov.com/files/Resume-October-2023.pdf"
+      href="https://jeremygavrilov.com/files/Resume-April-2025.pdf"
       target="_blank"
       rel="noopener noreferrer"
       className={styles.resumeButton}
