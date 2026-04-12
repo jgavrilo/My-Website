@@ -19,6 +19,7 @@
   
   .skill {
     background-color: var(--skills-background-color);
+    color: var(--skills-pill-text-color);
     border-radius: 4px;
     padding: 0.5rem 1rem;
     margin: 0.5rem;

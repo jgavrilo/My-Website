@@ -7,14 +7,17 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  /* Color variables */  
-  --base-color-1: #0b1d51;
-  --base-color-2: #B580DC;
-  --base-color-3: #6ba1c4;
-  --base-color-4: white;
+  /* Color variables — high-contrast dark UI (WCAG-friendly body text on deep slate) */
+  --base-color-1: #0f172a;
+  --base-color-2: #f1f5f9;
+  --base-color-3: #38bdf8;
+  --base-color-4: #ffffff;
 
-  /* Navigation */  
-  --navigation-bar-color-rgb: 11, 29, 34;
+  /* Solid page background (used with body gradient) */
+  --background-start-rgb: 15, 23, 42;
+
+  /* Navigation */
+  --navigation-bar-color-rgb: 15, 23, 42;
   --navigation-bar-color: var(--base-color-1);
   --navigation-bar-text-color: var(--base-color-2);
   --navigation-bar-text-hover-color: var(--base-color-3);
@@ -22,36 +25,38 @@
   /* General */
   --background-color: var(--base-color-1);
   --text-color: var(--base-color-2);
+  --primary-color: var(--base-color-3);
 
   --introduction-background-color: var(--base-color-1);
   --about-me-background-color: var(--base-color-1);
 
-  /* Skills */
+  /* Skills — section text follows body; pills use a light surface + dark ink */
   --skills-background-color: var(--base-color-4);
   --skills-text-color: var(--base-color-2);
+  --skills-pill-text-color: var(--base-color-1);
 
   /* Experience */
   --experience-background-color: var(--base-color-1);
   --job-background-color: var(--base-color-1);
   --experience-text-color: var(--base-color-2);
   --job-text-color: var(--base-color-2);
-  --job-border-color: var(--base-color-4);
+  --job-border-color: rgba(241, 245, 249, 0.35);
 
   /* Education */
   --education-background-color: var(--base-color-1);
   --education-text-color: var(--base-color-2);
   --education-instance-background-color: var(--base-color-1);
   --education-instance-text-color: var(--base-color-2);
-  --education-instance-border-color: var(--base-color-4);
+  --education-instance-border-color: rgba(241, 245, 249, 0.35);
 
   /* Projects */
   --project-background-color: var(--base-color-1);
   --project-text-color: var(--base-color-2);
   --project-instance-background-color: var(--base-color-1);
   --project-instance-text-color: var(--base-color-2);
-  --project-instance-border-color: var(--base-color-4);
-  --project-link-button-color:  var(--base-color-2);
-  --project-link-hover-button-color:  var(--base-color-3);
+  --project-instance-border-color: rgba(241, 245, 249, 0.35);
+  --project-link-button-color: #2563eb;
+  --project-link-hover-button-color: #3b82f6;
   --project-link-button-text-color: var(--base-color-4);
 
   /* Project Cards */
@@ -61,7 +66,7 @@
   /* Footer */
   --footer-background-color: var(--base-color-1);
   --footer-fluid-background-color: var(--base-color-1);
-  --footer-border-color: var(--base-color-1);
+  --footer-border-color: rgba(241, 245, 249, 0.2);
   --footer-text-color: var(--base-color-2);
   --footer-link-color: var(--base-color-2);
   --footer-link-hover-color: var(--base-color-3);

@@ -57,7 +57,7 @@
   
   .projectTechnologies span {
     background-color: var(--skills-background-color);
-    color: var(--skills-text-color);
+    color: var(--skills-pill-text-color);
     border-radius: 4px;
     padding: 0.3rem 0.6rem;
     font-size: 0.9rem;
@@ -74,7 +74,7 @@
   .projectLink {
     text-decoration: none;
     background-color: var(--project-link-button-color);
-    color: var(--skills-background-color);
+    color: var(--project-link-button-text-color);
     border-radius: 4px;
     padding: 0.3rem 0.6rem;
     font-size: 0.9rem;
