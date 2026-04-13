@@ -23,8 +23,9 @@ const AboutMe: React.FC = () => {
       </div>
       <div className={style.aboutMeText}>
         <p>
-          As a passionate Full Stack Developer holding a Computer Science degree from Syracuse University, 
-          I bring two years of industry experience to the table, along with expertise in APIs, AWS, Java, Web Development, and App Development.
+          I have a B.S. in Computer Science from Syracuse University and about four years in the field between engineering at Amazon and contract work 
+          building apps and systems for small businesses. My goal is to help businesses leverage APIs, servers, and modern web & app stacks to make 
+          day to day activities easier and more efficient.
         </p>
         <p>
           I thrive on tackling complex projects and am committed to staying current with cutting-edge technologies and industry best practices.
