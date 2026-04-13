@@ -2,7 +2,7 @@ import { FaInstagram, FaGithub, FaSpotify, FaLinkedin } from 'react-icons/fa';
 import { BiCoffeeTogo } from 'react-icons/bi';
 
 export const SECTIONS = [
-    { id: 'intro', text: 'Hello, World!' },
+    { id: 'intro', text: 'Intro' },
     { id: 'aboutme', text: 'About Me' },
     { id: 'experience', text: 'Experience' },
     { id: 'education', text: 'Education' },

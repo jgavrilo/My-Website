@@ -1,39 +1,49 @@
-/* The .pageWrapper class sets up a flex container that includes the Navbar and main content */
 .pageWrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: var(--bg);
 }
 
-/* The .container class sets up a CSS Grid container for the layout */
 .container {
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr; /* Define the width ratio of the three columns */
+  grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) minmax(0, 4rem);
+  flex: 1;
+  width: 100%;
+  column-gap: 0;
 }
 
-/* The .mainContent class styles the main content area */
+/* Full width of center grid column so section backgrounds bleed edge-to-edge between side rails */
 .mainContent {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  padding-top: var(--layout-header-pt);
+  padding-bottom: var(--layout-main-pb);
 }
 
-/* The .leftColumn and .rightColumn classes style the side columns */
 .leftColumn,
 .rightColumn {
-  background-color: var(--background-color);
+  background-color: transparent;
   min-height: 100vh;
 }
 
-/* Media query to hide side columns on smaller screens */
+.leftColumn {
+  border-right: 1px solid var(--border-subtle);
+}
+
 @media screen and (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr; /* Set the width ratio to display only the main content */
+    grid-template-columns: 1fr;
   }
 
   .leftColumn,
   .rightColumn {
-    min-height: 0vh; /* Set the minimum height to 0 for side columns on smaller screens */
+    min-height: 0;
+    border-right: none;
   }
+
 }

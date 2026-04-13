@@ -3,15 +3,15 @@
     color: var(--footer-text-color);
     background-color: var(--footer-background-color);
     border-top: 1px solid var(--footer-border-color);
-    padding: 20px 0;
+    padding: clamp(2rem, 5vw, 3rem) var(--layout-page-x-wide);
     text-align: center;
 }
 
 /* The .containerFluid styles the container for the fluid content in the footer */
 .containerFluid {
     background-color: var(--footer-fluid-background-color);
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: clamp(1rem, 3vw, 1.5rem) var(--layout-page-x-wide);
+    margin-top: clamp(1.25rem, 3vw, 2rem);
 }
   
 /* The .containerFluid p styles the text in the fluid content container */

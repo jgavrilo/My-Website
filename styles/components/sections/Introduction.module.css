@@ -1,20 +1,21 @@
 /* Styles for the Introduction component */
 
 .introduction {
-  /* Layout */
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   text-align: left;
-  justify-content: center;
-  padding: 1.5rem;
-  max-width: 75vw;
-  padding-top: 10vh;
+  justify-content: flex-start;
+  padding: 0.5rem 0 0;
+  width: 100%;
+  max-width: min(100%, var(--max-width));
+  box-sizing: border-box;
 
-  /* Typography */
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
+  /* Typography — body: IBM Plex Mono */
+  font-family: var(--font-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  color: var(--text);
 }
 
 /* Media query for mobile view (768px and smaller) */
@@ -24,40 +25,34 @@
   }
 }
 
-/* Name and message headings */
+.heroTitle {
+  width: 100%;
+}
+
+/* Name + tagline inherit size from SectionTitle hero foreground */
 .introduction h1 {
-  font-family: var(--font-mono);
-  font-weight: 400;
+  font-weight: 800;
+  letter-spacing: -0.032em;
+  line-height: var(--leading-heading-tight);
+}
+
+.name,
+.message {
+  margin: 0;
+}
+
+.headlineAccent {
+  color: var(--signal);
 }
 
 /* Text paragraphs */
 .introduction p {
-  font-size: 1.2rem;
-  font-family: var(--font-mono);
-  max-width: 800px;
+  font-size: 1.05rem;
+  max-width: 42rem;
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
 }
 
-/* Hello World message */
-#helloWorld {
-  /* No styles applied */
-}
-
-/* Name heading */
-#name {
-  margin: 0px;
-  font-size: clamp(40px, 3.5vw, 80px);
-}
-
-/* Message heading */
-#message {
-  margin: 0px;
-  font-size: clamp(40px, 3.5vw, 80px);
-}
-
-/* Bio paragraph */
-#welcome {
-  /* No styles applied */
-}
 
 /* Animation keyframes for fade-in effect */
 @keyframes fadeIn {

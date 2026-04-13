@@ -1,5 +1,6 @@
 import React from 'react';
 import style from '../../styles/components/sections/Skills.module.css';
+import SectionTitle from './SectionTitle';
 
 const Skills: React.FC = () => {
   const skills = [    
@@ -16,7 +17,14 @@ const Skills: React.FC = () => {
 
   return (
     <section className={style.skills}>
-      <h2>Skills</h2>
+      <div className={style.sectionHeader}>
+        <SectionTitle
+          index="05"
+          title="Core defaults"
+          lede="Languages and platforms I'd list first in a design doc or a new repo README."
+          align="center"
+        />
+      </div>
       <div className={style.skillsContainer}>
         {skills.map((skill, index) => (
           <div key={index} className={style.skill}>

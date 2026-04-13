@@ -3,27 +3,28 @@
   background-color: transparent;
   position: fixed;
   left: 0;
-  margin-top: 10vh;
+  margin-top: var(--layout-header-pt);
   height: 100vh;
-  width: 12vw;
+  width: min(10.5rem, 19vw);
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 1rem;
-  font-family: var(--font-mono);
-}
-
-/* The .dynamic class adds a smooth transition effect for the left column */
-.dynamic {
-  transition: transform 0.3s ease-in-out;
+  padding: clamp(1.25rem, 3vw, 1.75rem) clamp(0.65rem, 1.5vw, 1rem) 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-body);
+  line-height: 1.55;
 }
 
 /* The .item class styles each item in the left column menu */
 .item {
   cursor: pointer;
   color: var(--navigation-bar-text-color);
-  margin: 0.5rem;
+  margin: 0.35rem 0;
+  padding-right: 0.25rem;
   transition: color 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
   opacity: 0;
   transform: translateX(-100%);

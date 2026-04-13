@@ -1,168 +1,196 @@
-/* Define global variables for light theme */
+/**
+ * Jeremy theme — warm purple neutrals + lavender “signal” accent for headlines & links.
+ * `--signal` drives the editorial beam / index / kicker (same family as `--accent`).
+ * Light/dark via data-theme; prefers dark when unset.
+ */
+
+/* ----- Light ----- */
 :root {
-  /* General variables */
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  color-scheme: light;
 
-  /* Color variables — high-contrast dark UI (WCAG-friendly body text on deep slate) */
-  --base-color-1: #0f172a;
-  --base-color-2: #f1f5f9;
-  --base-color-3: #38bdf8;
-  --base-color-4: #ffffff;
+  --max-width: 72rem;
+  --layout-page-x: clamp(1.25rem, 4vw, 2rem);
+  --layout-page-x-wide: clamp(1.5rem, 5vw, 3.5rem);
+  --layout-section-y: clamp(3rem, 7vw, 6rem);
+  --layout-header-pt: 5rem;
+  --layout-main-pb: clamp(2.5rem, 6vw, 5rem);
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
 
-  /* Solid page background (used with body gradient) */
-  --background-start-rgb: 15, 23, 42;
+  --font-body: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Menlo, monospace;
+  --font-heading: 'Libre Franklin', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Navigation */
-  --navigation-bar-color-rgb: 15, 23, 42;
-  --navigation-bar-color: var(--base-color-1);
-  --navigation-bar-text-color: var(--base-color-2);
-  --navigation-bar-text-hover-color: var(--base-color-3);
-  
-  /* General */
-  --background-color: var(--base-color-1);
-  --text-color: var(--base-color-2);
-  --primary-color: var(--base-color-3);
+  --leading-body: 1.68;
+  --leading-heading: 1.2;
+  --leading-heading-tight: 1.15;
+  --tracking-body: 0.02em;
+  --tracking-heading: -0.028em;
 
-  --introduction-background-color: var(--base-color-1);
-  --about-me-background-color: var(--base-color-1);
+  /* Surfaces (slight violet-gray warmth) */
+  --bg: #eeedf2;
+  --bg-subtle: #e4e2ea;
+  --surface: #f6f5f8;
+  --surface-raised: #e9e7ef;
+  --border: #b8b4c4;
+  --border-subtle: #cbc8d6;
+  --text: #14101c;
+  --text-secondary: #3d3750;
+  --text-muted: #605a70;
 
-  /* Skills — section text follows body; pills use a light surface + dark ink */
-  --skills-background-color: var(--base-color-4);
-  --skills-text-color: var(--base-color-2);
-  --skills-pill-text-color: var(--base-color-1);
+  /* Brand purple — signal matches accent for beams / kickers / focus */
+  --primary: #5a2e99;
+  --primary-hover: #4a2480;
+  --primary-subtle: #cfc3e2;
+  --accent: #6b3daf;
+  --signal: var(--accent);
+  --signal-bright: #7c4fc4;
 
-  /* Experience */
-  --experience-background-color: var(--base-color-1);
-  --job-background-color: var(--base-color-1);
-  --experience-text-color: var(--base-color-2);
-  --job-text-color: var(--base-color-2);
-  --job-border-color: rgba(241, 245, 249, 0.35);
+  --success: #15803d;
+  --error: #b91c1c;
+  --warning: #a16207;
 
-  /* Education */
-  --education-background-color: var(--base-color-1);
-  --education-text-color: var(--base-color-2);
-  --education-instance-background-color: var(--base-color-1);
-  --education-instance-text-color: var(--base-color-2);
-  --education-instance-border-color: rgba(241, 245, 249, 0.35);
+  /* Legacy / component aliases */
+  --background-color: var(--bg);
+  --text-color: var(--text);
+  --primary-color: var(--primary);
+  --introduction-background-color: var(--bg);
+  --about-me-background-color: var(--bg);
 
-  /* Projects */
-  --project-background-color: var(--base-color-1);
-  --project-text-color: var(--base-color-2);
-  --project-instance-background-color: var(--base-color-1);
-  --project-instance-text-color: var(--base-color-2);
-  --project-instance-border-color: rgba(241, 245, 249, 0.35);
-  --project-link-button-color: #2563eb;
-  --project-link-hover-button-color: #3b82f6;
-  --project-link-button-text-color: var(--base-color-4);
+  --skills-background-color: var(--primary-subtle);
+  --skills-text-color: var(--text);
+  --skills-pill-text-color: var(--primary);
 
-  /* Project Cards */
-  --card-background-color: var(--base-color-4);
-  --card-text-color: var(--base-color-1);
+  --experience-background-color: var(--bg);
+  --job-background-color: transparent;
+  --experience-text-color: var(--text);
+  --job-text-color: var(--text);
+  --job-border-color: var(--border-subtle);
 
-  /* Footer */
-  --footer-background-color: var(--base-color-1);
-  --footer-fluid-background-color: var(--base-color-1);
-  --footer-border-color: rgba(241, 245, 249, 0.2);
-  --footer-text-color: var(--base-color-2);
-  --footer-link-color: var(--base-color-2);
-  --footer-link-hover-color: var(--base-color-3);
+  --education-background-color: var(--bg);
+  --education-text-color: var(--text);
+  --education-instance-background-color: var(--surface-raised);
+  --education-instance-text-color: var(--text);
+  --education-instance-border-color: var(--border-subtle);
+
+  --project-background-color: var(--bg);
+  --project-text-color: var(--text);
+  --project-instance-background-color: var(--surface-raised);
+  --project-instance-text-color: var(--text);
+  --project-instance-border-color: var(--border-subtle);
+  --project-link-button-color: transparent;
+  --project-link-hover-button-color: var(--primary-subtle);
+  --project-link-button-text-color: var(--primary);
+
+  --card-background-color: var(--surface-raised);
+  --card-text-color: var(--text);
+
+  --footer-background-color: var(--surface);
+  --footer-fluid-background-color: var(--surface);
+  --footer-border-color: var(--border-subtle);
+  --footer-text-color: var(--text-secondary);
+  --footer-link-color: var(--text-secondary);
+  --footer-link-hover-color: var(--signal);
+
+  --navigation-bar-text-color: var(--text-secondary);
+  --navigation-bar-text-hover-color: var(--signal);
 }
 
-/* Define global variables for dark theme */
-@media (prefers-color-scheme: light) {
-  :root {
+/* ----- Dark ----- */
+html[data-theme='dark'] {
+  color-scheme: dark;
 
-    /* Color variables */
-    --base-color-dark-1: #202124; /* Primary background, near-black */
-    --base-color-dark-2: #E8EAED; /* Primary text, off-white */
-    --base-color-dark-3: #5F6368; /* Secondary text, grey */
-    --base-color-dark-4: #3C4043; /* Secondary background, dark grey */
+  --bg: #13101a;
+  --bg-subtle: #1a1524;
+  --surface: #201b2e;
+  --surface-raised: #2a2340;
+  --border: #3a3050;
+  --border-subtle: #2e2642;
+  --text: #ede7f4;
+  --text-secondary: #b8a9cc;
+  --text-muted: #7e6e94;
 
-    /* Navigation */
-    --navigation-bar-color-dark: var(--base-color-dark-1);
-    --navigation-bar-text-color-dark: var(--base-color-dark-2);
-    --navigation-bar-text-hover-color-dark: var(--base-color-dark-3);
+  --primary: #a87fd4;
+  --primary-hover: #bf9be8;
+  --primary-subtle: #2e2244;
+  --accent: #c4a2e8;
+  --signal: var(--accent);
+  --signal-bright: #dcc6f5;
 
-    /* General */
-    --background-color-dark: var(--base-color-dark-1);
-    --text-color-dark: var(--base-color-dark-2);
+  --success: #6aaf7b;
+  --error: #d47070;
+  --warning: #c4a050;
+}
 
-    /* Skills */
-    --skills-background-color-dark: var(--base-color-dark-4);
-    --skills-text-color-dark: var(--base-color-dark-2);
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
 
-    /* Experience */
-    --experience-background-color-dark: var(--base-color-dark-1);
-    --job-background-color-dark: var(--base-color-dark-4);
-    --experience-text-color-dark: var(--base-color-dark-2);
-    --job-text-color-dark: var(--base-color-dark-2);
-    --job-border-color-dark: var(--base-color-dark-3);
+    --bg: #13101a;
+    --bg-subtle: #1a1524;
+    --surface: #201b2e;
+    --surface-raised: #2a2340;
+    --border: #3a3050;
+    --border-subtle: #2e2642;
+    --text: #ede7f4;
+    --text-secondary: #b8a9cc;
+    --text-muted: #7e6e94;
 
-    /* Education */
-    --education-background-color-dark: var(--base-color-dark-1);
-    --education-text-color-dark: var(--base-color-dark-2);
-    --education-instance-background-color-dark: var(--base-color-dark-4);
-    --education-instance-text-color-dark: var(--base-color-dark-2);
-    --education-instance-border-color-dark: var(--base-color-dark-3);
+    --primary: #a87fd4;
+    --primary-hover: #bf9be8;
+    --primary-subtle: #2e2244;
+    --accent: #c4a2e8;
+    --signal: var(--accent);
+    --signal-bright: #dcc6f5;
 
-    /* Projects */
-    --project-background-color-dark: var(--base-color-dark-1);
-    --project-text-color-dark: var(--base-color-dark-2);
-    --project-instance-background-color-dark: var(--base-color-dark-4);
-    --project-instance-text-color-dark: var(--base-color-dark-2);
-    --project-instance-border-color-dark: var(--base-color-dark-3);
-    --project-link-button-color-dark: var(--base-color-dark-2);
-    --project-link-hover-button-color-dark: var(--base-color-dark-3);
-    --project-link-button-text-color-dark: var(--base-color-dark-1);
-
-    /* Project Cards */
-    --card-background-color-dark: var(--base-color-dark-4);
-    --card-text-color-dark: var(--base-color-dark-2);
-
-    /* Footer */
-    --footer-background-color-dark: var(--base-color-dark-1);
-    --footer-fluid-background-color-dark: var(--base-color-dark-1);
-    --footer-border-color-dark: var(--base-color-dark-3);
-    --footer-text-color-dark: var(--base-color-dark-2);
-    --footer-link-color-dark: var(--base-color-dark-2);
-    --footer-link-hover-color-dark: var(--base-color-dark-3);
+    --success: #6aaf7b;
+    --error: #d47070;
+    --warning: #c4a050;
   }
 }
 
-/* Reset padding and margin for all elements */
+/* Reset */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-/* Set global styles for html and body */
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-/* Set global styles for body element */
 body {
-  color: var(--card-text-color);
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--background-color)
-    )
-    rgb(var(--background-start-rgb));
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Set global styles for anchor element */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}

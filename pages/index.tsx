@@ -17,16 +17,16 @@ const HomePage: React.FC = () => {
   
   return (
     <Layout>
-      <Section id="intro">
+      <Section id="intro" align="start">
         <Introduction />
       </Section>
-      <Section id="aboutme">
+      <Section id="aboutme" variant="alt">
         <AboutMe />
       </Section>
       <Section id="experience">
         <Experience />
       </Section>
-      <Section id="education">
+      <Section id="education" variant="alt">
         <Education />
       </Section>
       <Section id="projects">

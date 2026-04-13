@@ -1,13 +1,11 @@
 .skills {
-    padding: 1.5rem;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    padding: 0;
+    font-family: var(--font-body);
+    line-height: 1.65;
     color: var(--skills-text-color);
   }
-  
-  .skills h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+
+  .sectionHeader {
     text-align: center;
   }
   
@@ -29,10 +27,6 @@
   
   /* Responsive design for smaller screens */
   @media (max-width: 768px) {
-    .skills h2 {
-      font-size: 1.5rem;
-    }
-  
     .skill {
       font-size: 0.9rem;
     }

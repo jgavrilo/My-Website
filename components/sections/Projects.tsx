@@ -1,5 +1,6 @@
 import React from 'react';
 import style from '../../styles/components/sections/Projects.module.css';
+import SectionTitle from './SectionTitle';
 
 type Project = {
   id: number;
@@ -72,7 +73,14 @@ const Projects: React.FC = () => {
 
   return (
     <section className={style.projects}>
-      <h2>Projects</h2>
+      <div className={style.sectionHeader}>
+        <SectionTitle
+          index="04"
+          title="Experience"
+          lede="Extensions, apps, and experiments—things with repos, users, or both."
+          align="center"
+        />
+      </div>
       <div className={style.projectsContainer}>
         {projects.map((project) => (
           <div key={project.id} className={style.project}>

@@ -5,12 +5,20 @@
  */
 import React from 'react';
 import style from "../../styles/components/sections/AboutMe.module.css";
+import SectionTitle from './SectionTitle';
 
 const AboutMe: React.FC = () => {
   return (
     <section className={style.aboutMe}>
       <div className={style.header}>
-        <h2>About Me</h2>
+        <div className={style.titleBlock}>
+          <SectionTitle
+            index="01"
+            title="About Me"
+            lede="Where I studied, where I've shipped, and what I do when the laptop closes."
+            align="left"
+          />
+        </div>
         <img src="Profile.jpg" alt="Jeremy Gavrilov" className={style.aboutMePhoto} />
       </div>
       <div className={style.aboutMeText}>

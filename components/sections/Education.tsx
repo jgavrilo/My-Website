@@ -5,6 +5,7 @@
  */
 import React from 'react';
 import style from '../../styles/components/sections/Education.module.css';
+import SectionTitle from './SectionTitle';
 
 type EducationItem = {
   id: number;
@@ -48,7 +49,14 @@ const Education: React.FC = () => {
 
   return (
     <section className={style.education}>
-      <h2>Education</h2>
+      <div className={style.sectionHeader}>
+        <SectionTitle
+          index="03"
+          title="Experience"
+          lede="Undergrad CS, a term abroad, and the courses that still show up when I'm sketching architecture."
+          align="center"
+        />
+      </div>
       <div className={style.educationContainer}>
         {educationItems.map((item) => (
           <div key={item.id} className={style.educationItem}>

@@ -6,6 +6,7 @@
  */
 import React from 'react';
 import style from '../../styles/components/sections/Experience.module.css';
+import SectionTitle from './SectionTitle';
 
 // Define Job type
 type Job = {
@@ -54,7 +55,14 @@ const Experience: React.FC = () => {
 
   return (
     <section className={style.experience}>
-      <h2>Experience</h2>
+      <div className={style.sectionHeader}>
+        <SectionTitle
+          index="02"
+          title="Experience"
+          lede="Marketplace-scale features, AWS-heavy paths, and contractor work where uptime and real users are the brief."
+          align="center"
+        />
+      </div>
       <div className={style.jobsContainer}>
         {jobs.map((job) => (
           <div key={job.id} className={style.job}>

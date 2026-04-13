@@ -1,26 +1,38 @@
-/* Common styles for both sections */
+/* Common styles for both sections — min height 80vh (was full viewport) */
 .section1,
 .section2,
 .introduction {
-  background-color: var(--introduction-background-color);  
-  width: 100%;   
-  min-height: 100vh;
-  height: 100vh;
-  padding: 0px;
-               /* Make the sections take up the full width of the viewport */
-  height: fit-content;  
-  display: flex;              
-  flex-direction: column;     
-  justify-content: center;    /* Center the content vertically */
-  align-items: center;        /* Center the content horizontally */
-      
+  background-color: var(--introduction-background-color);
+  width: 100%;
+  min-height: 80vh;
+  height: fit-content;
+  padding: var(--layout-section-y) var(--layout-page-x-wide);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   -webkit-box-pack: center;
-  -webkit-box-align: center;      
+  -webkit-box-align: center;
 }
 
 /* Specific styles for section 1 */
 .section1 {
-  background-color: var(--background-color);  
+  background-color: var(--background-color);
+}
+
+/* Alternating band — uses theme surface vs page bg */
+.section1Alt {
+  background-color: var(--surface);
+}
+
+/* Intro / hero: left + top aligned (avoid vertical centering that sits hero too low) */
+.section1.section1AlignStart {
+  align-items: flex-start;
+  align-self: stretch;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 /* Specific styles for section 2 */

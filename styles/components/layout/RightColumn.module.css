@@ -4,14 +4,16 @@
   position: fixed;
   bottom: 0; 
   right: 0;
-  margin-bottom: 10vh; 
+  margin-bottom: var(--layout-header-pt);
   height: 100vh;
-  width: 4.2rem;
+  width: 4.5rem;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: flex-end;
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
+  padding-right: clamp(0.35rem, 1.5vw, 0.75rem);
+  box-sizing: border-box;
 }
 
 /* The .item class styles each item in the right column menu */

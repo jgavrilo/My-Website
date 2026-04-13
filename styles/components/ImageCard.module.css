@@ -7,7 +7,7 @@
   min-height: 40vh;
   height: 50vh;
   width: 40vw;
-  border-radius: 25px; 
+  border-radius: var(--radius-lg);
 }
   
 /* Container for the image and title */
@@ -19,7 +19,7 @@
   left: 0;
   overflow: hidden;
   transition: transform 0.5s ease-out;
-  border-radius: 25px; 
+  border-radius: var(--radius-lg);
 }
   
 /* The image itself */
@@ -27,7 +27,7 @@
   width: 100%;
   height: 100%;
   filter: brightness(0.4);
-  border-radius: 25px; 
+  border-radius: var(--radius-lg);
 }
   
 /* The title text */
@@ -36,7 +36,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--card-background-color);
+  color: #ffffff;
   font-size: clamp(1rem, 2vw, 1.5rem);
   text-align: center;
 } 
@@ -61,8 +61,8 @@
   z-index: 2;
   transition: transform 0.5s ease-out;
   overflow-y: auto;
-  border-radius: 25px;
-  position: relative; /* Add this property */
+  border-radius: var(--radius-lg);
+  position: relative;
 }
   
 /* Link to the GitHub repository */
@@ -81,7 +81,7 @@
   
 /* Change color when you hover over the GitHub icon */
 .descriptionCard .githubIcon:hover {
-  color: var(--navigation-bar-text-hover-color);
+  color: var(--primary);
 }
   
 /* The description heading */

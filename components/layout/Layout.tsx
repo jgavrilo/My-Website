@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
         <main className={styles.mainContent}>{children}</main>
         <div className={styles.rightColumn}>
-          <RightColumn socialIcons={SOCIAL_MEDIA} />;
+          <RightColumn socialIcons={SOCIAL_MEDIA} />
         </div>
       </div>
       <Footer />

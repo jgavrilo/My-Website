@@ -1,0 +1,143 @@
+/* 2026 editorial headline: mono index + signal beam + display title + contextual lede */
+
+.root {
+  position: relative;
+  width: 100%;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.alignLeft {
+  min-width: 0;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignCenter .meta {
+  justify-content: center;
+}
+
+.alignCenter .lede,
+.alignCenter .kicker {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+  animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.index,
+.mark {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--signal);
+  flex-shrink: 0;
+}
+
+.beam {
+  flex: 1;
+  min-width: 2.5rem;
+  max-width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--signal) 0%, color-mix(in srgb, var(--signal) 35%, transparent) 55%, transparent 100%);
+  opacity: 0.85;
+}
+
+.alignCenter .beam {
+  max-width: min(100%, 18rem);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 4.5vw, 2.85rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  color: var(--text);
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.06s both;
+}
+
+.lede {
+  margin: 0.65rem 0 0;
+  max-width: 38rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  animation: rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+/* Hero: kicker above the name block */
+.kicker {
+  margin: 0 0 0.5rem;
+  max-width: 40rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--signal);
+  animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.04s both;
+}
+
+.heroHeadline {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: var(--leading-heading-tight);
+  color: var(--text);
+  animation: rise 0.72s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+
+.variantHero .meta {
+  margin-bottom: 0.5rem;
+}
+
+.variantHero .heroHeadline {
+  font-size: clamp(2rem, 3.5vw, 5rem);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meta,
+  .title,
+  .lede,
+  .kicker,
+  .heroHeadline {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(1.55rem, 6vw, 2.1rem);
+  }
+
+  .variantHero .heroHeadline {
+    font-size: clamp(1.75rem, 8vw, 2.75rem);
+  }
+}

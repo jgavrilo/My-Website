@@ -1,48 +1,57 @@
-/* The .header class styles the header (Navbar) section */
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 10vh;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 0;
+  right: 0;
   z-index: 100;
-  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+  padding: 0 var(--layout-page-x-wide);
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
   animation: fadeInFromTop 0.5s ease-out;
 }
 
-/* The .header::before creates a semi-transparent background for the header with a blur effect */
-.header::before {
-  content: '';
-  background-color: rgba(var(--navigation-bar-color-rgb), 0.8);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  backdrop-filter: blur(5px);
+.headerLeft {
+  width: 3rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-/* Hides the nav bar while scrolling down */
-.hidden {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-/* The .brand class styles the brand text */
 .brand {
-  color: var(--navigation-bar-text-color);
-  font-size: 1.5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: var(--tracking-heading);
+  line-height: var(--leading-heading);
+  color: var(--text);
 }
 
-/* The .dropdownContainer class styles the container for the dropdown menu */
+.brandDot {
+  color: var(--primary);
+}
+
+.brandRest {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.headerActions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
 .dropdownContainer {
   position: absolute;
   top: 100%;
@@ -52,69 +61,69 @@
   animation-duration: 0.5s;
 }
 
-/* The dropdownFade animation fades in and out the dropdown menu */
 @keyframes dropdownFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* The .dropdownMenu class styles the dropdown menu */
 .dropdownMenu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
   margin: 0;
-  padding: 0;
-  background-color: rgba(var(--navigation-bar-color-rgb), 0.8);
-  backdrop-filter: blur(5px);
+  padding: 0.75rem 1rem;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-/* The .dropdownMenu li class styles each item in the dropdown menu */
 .dropdownMenu li {
   margin: 10px;
 }
 
-/* The .dropdownMenu .navLink class styles the links in the dropdown menu */
 .dropdownMenu .navLink {
-  color: var(--navigation-bar-text-color);
+  color: var(--text-secondary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-body);
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-/* The .dropdownMenu .navLink:hover class styles the links in the dropdown menu on hover */
 .dropdownMenu .navLink:hover {
-  color: var(--navigation-bar-text-hover-color);
+  color: var(--primary);
 }
 
-/* Media query for mobile view (less than 768px) */
 @media (max-width: 768px) {
-  /* Change flex-direction to column when screen size is less than 768px */
   .dropdownMenu {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  /* Set width to 100% to ensure each item takes up full width */
   .dropdownMenu li {
     width: 100%;
   }
 
-  /* Set margin-bottom to create space between items */
   .dropdownMenu .navLink {
     margin-bottom: 10px;
   }
 }
 
-/* Media query for desktop view (768px and larger) */
 @media screen and (min-width: 768px) {
   .dropdownMenu {
-    display: none; /* Hide the dropdown menu on larger screens */
+    display: none;
   }
 }
 
-/* Animation for the fadeInFromTop effect */
 @keyframes fadeInFromTop {
   from {
     opacity: 0;
@@ -126,31 +135,31 @@
   }
 }
 
-.navContainer {
-  display: flex;
-  align-items: center;
-}
-
-/* Resume Button */
 .resumeButton {
-  background-color: transparent;
-  border: 2px solid var(--navigation-bar-text-color); /* Adjust the border color to match your design */
-  color: var(--navigation-bar-text-color); /* Adjust the text color to match your design */
-  padding: 8px 16px;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
   text-decoration: none;
-  font-size: 14px;
-  margin: 4px 2px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
   cursor: pointer;
-  transition-duration: 0.4s;
-  position: absolute;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  border-radius: 15px; /* Add this line to make the corners rounded */
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+  white-space: nowrap;
 }
 
 .resumeButton:hover {
-  background-color: var(--navigation-bar-text-color); /* Adjust the hover background color to match your design */
-  color: white; /* Adjust the hover text color to match your design */
+  background: var(--primary-subtle);
+  border-color: var(--primary-hover);
+  color: var(--primary-hover);
 }

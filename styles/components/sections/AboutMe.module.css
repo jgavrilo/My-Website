@@ -1,12 +1,20 @@
 /* Main section styles */
 .aboutMe {
-  padding: 1.5rem;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  font-family: var(--font-mono);
-  max-width: 70vw;
-  background: var(--background-color);
+  padding: 0;
+  font-family: var(--font-body);
+  line-height: 1.65;
+  color: var(--text);
+  max-width: min(70vw, var(--max-width));
+  background: transparent;
+}
+
+.titleBlock {
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+  /* Keep the watermark + title in the text column only (not under the photo) */
+  max-width: calc(100% - 268px);
+  padding-right: 0.75rem;
 }
 
 /* Flex container for section title and image */
@@ -14,14 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   margin-bottom: 1rem;
-}
-
-/* Section title styles */
-.aboutMe h2 {
-  font-size: 2rem;
-  text-align: left;
-  color: var(--primary-color);
 }
 
 /* Image container styles */
@@ -29,7 +31,8 @@
   width: 250px;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-subtle);
+  box-shadow: 0 2px 12px color-mix(in srgb, var(--text) 8%, transparent);
 }
 
 /* Text container styles */
@@ -39,9 +42,10 @@
 
 /* Paragraph text styles */
 .aboutMeText p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 1rem;
   text-align: justify;
+  color: var(--text-secondary);
 }
 
 /* Responsive design for smaller screens */
@@ -49,6 +53,11 @@
   .header {
     flex-direction: column;
     align-items: center;
+  }
+
+  .titleBlock {
+    max-width: 100%;
+    padding-right: 0;
   }
 
   .aboutMePhoto {

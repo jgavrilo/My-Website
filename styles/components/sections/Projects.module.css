@@ -1,99 +1,111 @@
 .projects {
-    padding: 1.5rem;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--project-text-color);
-    background-color: var(--project-background-color);
-  }
-  
-  .projects h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .projectsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
+    padding: 0;
+  font-family: var(--font-body);
+  line-height: 1.65;
+  color: var(--project-text-color);
+  background-color: transparent;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.project {
+  width: 300px;
+  border: 1px solid var(--project-instance-border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--project-instance-background-color);
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.projectTitle {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: var(--tracking-heading);
+  line-height: var(--leading-heading);
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.projectDescription {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.projectTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.projectTechnologies span {
+  background-color: var(--skills-background-color);
+  color: var(--skills-pill-text-color);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.projectLink {
+  font-family: var(--font-body);
+  text-decoration: none;
+  background-color: var(--project-link-button-color);
+  color: var(--project-link-button-text-color);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.45;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.projectLink:hover {
+  background-color: var(--project-link-hover-button-color);
+  border-color: var(--primary-hover);
+  color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
   .project {
-    width: 300px;
-    border: 1px solid var(--project-instance-border-color);
-    border-radius: 4px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 80%;
   }
-  
-  .projectImage {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
-  .projectTitle {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .projectDescription {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .projectTechnologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  .projectTechnologies span {
-    background-color: var(--skills-background-color);
-    color: var(--skills-pill-text-color);
-    border-radius: 4px;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  
-  .projectLinks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-  
-  .projectLink {
-    text-decoration: none;
-    background-color: var(--project-link-button-color);
-    color: var(--project-link-button-text-color);
-    border-radius: 4px;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-  
-  .projectLink:hover {
-    background-color: var(--project-link-hover-button-color);
-  }
-  
-  /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
-    .projects h2 {
-      font-size: 1.5rem;
-    }
-  
-    .project {
-      width: 80%;
-    }
-  }
-  
+}
