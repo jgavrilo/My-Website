@@ -42,7 +42,7 @@ const Education: React.FC = () => {
       <div className={style.sectionHeader}>
         <SectionTitle
           index="03"
-          title="Experience"
+          title="Education"
           lede=""
           align="center"
         />
