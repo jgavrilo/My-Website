@@ -14,7 +14,7 @@ const Introduction: React.FC = () => {
         variant="hero"
         headingLevel={1}
         align="left"
-        lede="Full-stack · TypeScript · Systems that ship"
+        lede="App Development · API Integration · Systems Management"
         className={style.heroTitle}
       >
         <>
