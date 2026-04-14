@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
       <div className={style.sectionHeader}>
         <SectionTitle
           index="04"
-          title="Experience"
+          title="Projects"
           lede="Extensions, apps, and experiments—things with repos, users, or both."
           align="center"
         />

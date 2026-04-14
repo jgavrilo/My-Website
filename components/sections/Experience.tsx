@@ -59,7 +59,7 @@ const Experience: React.FC = () => {
         <SectionTitle
           index="02"
           title="Experience"
-          lede="Marketplace-scale features, AWS-heavy paths, and contractor work where uptime and real users are the brief."
+          lede=""
           align="center"
         />
       </div>

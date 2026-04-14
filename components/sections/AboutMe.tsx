@@ -15,7 +15,7 @@ const AboutMe: React.FC = () => {
           <SectionTitle
             index="01"
             title="About Me"
-            lede="Where I studied, where I've shipped, and what I do when the laptop closes."
+            lede=""
             align="left"
           />
         </div>

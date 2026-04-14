@@ -27,22 +27,12 @@ const Education: React.FC = () => {
       dates: '2017 - 2021',
       imageUrl: 'Syracuse.png',
       coursework: [ 
+        'Automata and Computability',
+        'Analysis of Algorithms',
         'Data Structures',
         'Database Management Systems',
         'Ethical Aspects of Engineering and Computer Science',
         'Programming Language: Theory & Practice',
-      ],
-    },
-    {
-      id: 2,
-      degree: 'Computer Science Study Abroad Program',
-      institution: 'Syracuse University London',
-      location: 'London, UK',
-      dates: 'Fall 2019',
-      imageUrl: 'Syracuse-London.jpeg',
-      coursework: [ 
-        'Automata and Computability',
-        'Introduction to Analysis of Algorithms',
       ],
     },
   ];
@@ -53,7 +43,7 @@ const Education: React.FC = () => {
         <SectionTitle
           index="03"
           title="Experience"
-          lede="Undergrad CS, a term abroad, and the courses that still show up when I'm sketching architecture."
+          lede=""
           align="center"
         />
       </div>
