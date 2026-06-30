@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   basePath: '',
   assetPrefix: '',
-  trailingSlash: true,
+  trailingSlash: false,
+  images: {
+    domains: ['firebasestorage.googleapis.com', 'storage.googleapis.com'],
+  },
 };
 
 module.exports = nextConfig;

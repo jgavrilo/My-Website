@@ -1,0 +1,17 @@
+/* Tailwind utilities for the dispensary portal — scoped to this layout only.
+   preflight is disabled in tailwind.config.ts so no global CSS reset is injected. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-syne), system-ui, sans-serif;
+  }
+}
+
+/* Thin scrollbars inside the portal */
+.dispensary-portal ::-webkit-scrollbar       { width: 6px; height: 6px; }
+.dispensary-portal ::-webkit-scrollbar-track { background: transparent; }
+.dispensary-portal ::-webkit-scrollbar-thumb { background: #2a352a; border-radius: 3px; }
+.dispensary-portal ::-webkit-scrollbar-thumb:hover { background: #3a4a3a; }

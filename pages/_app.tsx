@@ -1,6 +1,7 @@
 import '@component/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 function applyInitialTheme() {
@@ -19,15 +20,20 @@ function applyInitialTheme() {
 }
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const isPortal = router.pathname.startsWith('/portal');
+
   useEffect(() => {
     applyInitialTheme();
   }, []);
 
   return (
     <>
-      <Head>
-        <title>Jeremy Gavrilov</title>
-      </Head>
+      {!isPortal ? (
+        <Head>
+          <title>Jeremy Gavrilov</title>
+        </Head>
+      ) : null}
       <Component {...pageProps} />
     </>
   );

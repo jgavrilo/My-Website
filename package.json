@@ -12,12 +12,30 @@
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
+    "autoprefixer": "^10.5.2",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "firebase": "^12.15.0",
+    "firebase-admin": "^14.1.0",
+    "lucide-react": "^1.21.0",
     "next": "13.2.4",
+    "postcss": "^8.5.15",
+    "qrcode": "^1.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-dropzone": "^15.0.0",
     "react-icons": "^4.8.0",
-    "typescript": "5.0.3"
+    "speakeasy": "^2.0.0",
+    "stripe": "^22.3.0",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^3.4.19",
+    "typescript": "5.0.3",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6",
+    "@types/speakeasy": "^2.0.10"
   }
 }
