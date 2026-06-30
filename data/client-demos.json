@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "the-tech-couture",
+    "name": "The Tech Couture",
+    "url": "https://the-tech-couture-website-wtkl.vercel.app",
+    "passwordHash": "4e1847a6fca6058769c7ee6ad58ac1b8970b5543e70a8f33dbf015b1e572e28f",
+    "passwordSalt": "36fca6689bab1746eaaa2f4fc7959be4",
+    "active": true
+  }
+]
