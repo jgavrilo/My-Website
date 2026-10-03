@@ -19,7 +19,7 @@ interface ProjectLayoutProps {
   githubLink: string;
   appStoreLink: string;
   termsOfUseLink?: string;
-  privacyPolicyLink: string;
+  privacyPolicyLink?: string;
   projectDescription: string[];
   imageUrl: string;
   affiliateLinks: AffiliateLinkInfo[];
@@ -43,11 +43,6 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
     }
     const parentUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/'));
     window.location.href = parentUrl;
-  };
-
-  const navigateToPrivacyPolicy = () => {
-    // Assuming privacyPolicyLink is a valid URL
-    window.location.href = privacyPolicyLink;
   };
 
   return (
@@ -74,11 +69,20 @@ const ProjectLayout: React.FC<ProjectLayoutProps> = ({
               linkUrl={link.linkUrl}
             />
           ))}
-          <div className={styles.privacyPolicyButtonContainer}>
-            <button className={styles.privacyPolicyButton} onClick={navigateToPrivacyPolicy}>
-              Privacy Policy
-            </button>
-          </div>
+          {(privacyPolicyLink || termsOfUseLink) && (
+            <div className={styles.privacyPolicyButtonContainer}>
+              {privacyPolicyLink && (
+                <a className={styles.privacyPolicyButton} href={privacyPolicyLink}>
+                  Privacy Policy
+                </a>
+              )}
+              {termsOfUseLink && (
+                <a className={styles.privacyPolicyButton} href={termsOfUseLink}>
+                  Terms of Service
+                </a>
+              )}
+            </div>
+          )}
         </main>
       </div>
       <Footer />

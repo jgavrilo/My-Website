@@ -1,0 +1,151 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+}
+
+.mainContent {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 4.5rem;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+  padding-bottom: 3rem;
+}
+
+.backButton {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transform: translateY(-50%);
+  font-family: var(--font-body);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  background-color: var(--surface);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.backButton:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--primary-subtle);
+}
+
+.document {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem 0 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.kicker {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.updated {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.body {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.body h2 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 1.75rem 0 0.75rem;
+}
+
+.body h3 {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin: 1.25rem 0 0.5rem;
+}
+
+.body p {
+  margin-bottom: 1rem;
+}
+
+.body ul {
+  margin: 0 0 1rem 1.25rem;
+}
+
+.body li {
+  margin-bottom: 0.4rem;
+}
+
+.body a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.body a:hover {
+  color: var(--primary-hover);
+}
+
+.legalNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.legalNav a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.legalNav a:hover {
+  color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+  .backButton {
+    left: 1rem;
+    top: 1.75rem;
+    transform: none;
+  }
+
+  .document {
+    padding-top: 2.5rem;
+  }
+}

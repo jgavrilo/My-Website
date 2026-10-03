@@ -17,6 +17,15 @@ type Project = {
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
+      id: 7,
+      title: 'JG App',
+      description: 'A software engineering portfolio on your phone—about, resume, project demos, and contact details, kept up to date from Firebase with no account required.',
+      technologies: ['iOS', 'Android', 'Firebase'],
+      imageUrl: 'software-engineer.png',
+      repoLink: 'https://github.com/jgavrilo/Jeremy-Gavrilov-App',
+      websiteLink: '/jg-app',
+    },
+    {
       id: 1,
       title: 'InfoBytes',
       description: 'Simplify your daily life with InfoBytes, the app that helps you make informed decisions about your diet and allergies instantly. Beta available!',
